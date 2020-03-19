@@ -2,12 +2,11 @@ package by.jonline.five.dragon;
 
 public class Cave {
 	private Treasure[] treasures;
-	private Dragon owner;
 	private int counter;
 	
 	public Cave(Dragon owner) {
 		treasures = new Treasure[100];
-		this.owner = owner;
+		owner.setCave(this);
 	}
 	
 	public void add(Treasure treasure) {
@@ -18,9 +17,5 @@ public class Cave {
 	
 	public Treasure[] getTreasures() {
 		return treasures;
-	}
-	
-	public Dragon getOwner() {
-		return owner;
 	}
 }
